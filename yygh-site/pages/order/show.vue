@@ -145,7 +145,7 @@ export default {
 
   created() {
     this.orderId = this.$route.query.orderId
-
+    console.log(this.orderId)
     this.init()
   },
 
@@ -153,6 +153,7 @@ export default {
     init() {
       orderInfoApi.getOrderInfo(this.orderId).then(response => {
         this.orderInfo = response.data
+        console.log(response.data)
       })
     },
 

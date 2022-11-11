@@ -10,7 +10,6 @@ import com.atguigu.yygh.enums.OrderStatusEnum;
 import com.atguigu.yygh.hosp.client.HospitalFeignClient;
 import com.atguigu.yygh.model.order.OrderInfo;
 import com.atguigu.yygh.model.user.Patient;
-import com.atguigu.yygh.model.user.UserInfo;
 import com.atguigu.yygh.order.mapper.OrderMapper;
 import com.atguigu.yygh.order.service.OrderService;
 import com.atguigu.yygh.order.service.WeixinService;
@@ -28,7 +27,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -57,10 +59,10 @@ public class OrderServiceImpl extends
         ScheduleOrderVo scheduleOrderVo = hospitalFeignClient.getScheduleOrderVo(scheduleId);
 
         //判断当前时间是否还可以预约
-        if(new DateTime(scheduleOrderVo.getStartTime()).isAfterNow()
-                || new DateTime(scheduleOrderVo.getEndTime()).isBeforeNow()) {
-            throw new YyghException(ResultCodeEnum.TIME_NO);
-        }
+//        if(new DateTime(scheduleOrderVo.getStartTime()).isAfterNow()
+//                || new DateTime(scheduleOrderVo.getEndTime()).isBeforeNow()) {
+//            throw new YyghException(ResultCodeEnum.TIME_NO);
+//        }
 
         //获取签名信息
         SignInfoVo signInfoVo = hospitalFeignClient.getSignInfoVo(scheduleOrderVo.getHoscode());

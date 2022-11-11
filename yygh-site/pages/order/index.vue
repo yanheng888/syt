@@ -137,7 +137,7 @@ export default {
 
   created() {
     this.orderId = this.$route.query.orderId
-
+    console.log(this.$route.query)
     this.fetchData()
     this.findPatientList()
     this.getStatusList()
