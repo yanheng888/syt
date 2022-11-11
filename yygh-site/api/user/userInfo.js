@@ -18,11 +18,11 @@ export default {
     })
   },
 
-  saveUserAuah(userAuah) {
+  saveUserAuah(userAuth) {
     return request({
-      url: `${api_name}/auth/userAuah`,
+      url: `${api_name}/auth/userAuth`,
       method: 'post',
-      data: userAuah
+      data: userAuth
     })
   }
 }

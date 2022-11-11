@@ -5,7 +5,6 @@ import com.atguigu.yygh.common.result.Result;
 import com.atguigu.yygh.model.cmn.Dict;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -48,6 +47,13 @@ public class DictController {
     @GetMapping("findChildData/{id}")
     public Result findChildData(@PathVariable Long id) {
         List<Dict> list = dictService.findChlidData(id);
+        return Result.ok(list);
+    }
+
+    @ApiOperation(value = "根据数据id查询子数据列表")
+    @GetMapping("findByParentId/{id}")
+    public Result findByParentId(@PathVariable Long id) {
+        List<Dict> list = dictService.findByParentId(id);
         return Result.ok(list);
     }
 

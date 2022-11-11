@@ -1,7 +1,6 @@
 package com.atguigu.yygh.cmn.service;
 
 import com.atguigu.yygh.model.cmn.Dict;
-import com.atguigu.yygh.model.hosp.HospitalSet;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,4 +23,6 @@ public interface DictService extends IService<Dict> {
 
     //根据dictCode获取下级节点
     List<Dict> findByDictCode(String dictCode);
+
+    List<Dict> findByParentId(Long id);
 }

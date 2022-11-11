@@ -5,13 +5,10 @@ import com.atguigu.yygh.cmn.listener.DictListener;
 import com.atguigu.yygh.cmn.mapper.DictMapper;
 import com.atguigu.yygh.cmn.service.DictService;
 import com.atguigu.yygh.model.cmn.Dict;
-import com.atguigu.yygh.model.hosp.HospitalSet;
 import com.atguigu.yygh.vo.cmn.DictEeVo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -111,6 +108,18 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict> implements Di
         List<Dict> chlidData = this.findChlidData(dict.getId());
         return chlidData;
     }
+
+    @Cacheable(value = "dict",keyGenerator = "keyGenerator")
+    @Override
+    public List<Dict> findByParentId(Long parentId) {
+        List<Dict> dictList = baseMapper.selectList(new QueryWrapper<Dict>().eq("parent_id", parentId));
+        dictList.stream().forEach(dict -> {
+            boolean isHasChildren = this.isChildren(dict.getId());
+            dict.setHasChildren(isHasChildren);
+        });
+        return dictList;
+    }
+
 
     private Dict getDictByDictCode(String dictCode) {
         QueryWrapper<Dict> wrapper = new QueryWrapper<>();

@@ -30,3 +30,10 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2022-11-10 14:50:25.045 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
 2022-11-10 14:54:45.994 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
 2022-11-10 14:54:46.033 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-11-10 17:45:41.981 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=34m54s564ms).
+2022-11-10 17:53:34.483 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=7m52s531ms).
+2022-11-10 20:11:03.480 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=57s586ms).
+2022-11-10 20:29:01.319 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=17m57s859ms).
+2022-11-10 20:45:38.640 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m37s321ms).
+2022-11-10 21:14:32.104 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=28m53s463ms).
+2022-11-10 21:30:54.794 [GuliHikariPool housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - GuliHikariPool - Thread starvation or clock leap detected (housekeeper delta=16m22s690ms).
