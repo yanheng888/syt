@@ -2,7 +2,7 @@
 
 # syt
 
-##  Introduction:
+##  Introduction
 
 `syt` is an hospital online appointment system. In the past, patients had to go to hospital with no appointment and wait for several hours to meet their doctors. With the help of syt, patients can make an appointment with their doctors before meeting and they will not need to wait for long time. 
 
@@ -30,7 +30,7 @@ yygh-site is a vue project and aims to help  patients  make appointment with the
 
 ![image-20221111014621236](documents/typora-user-images/image-20221111014621236.png)
 
-#### Hospital management System for the platform:
+#### Hospital management System for the platform
 
 vue-admin-template-master is a vue project and aims to help hospital online appointment platform manager to manage hospital and users information.
 
@@ -42,7 +42,7 @@ vue-admin-template-master is a vue project and aims to help hospital online appo
 
 ![image-20221112004020687](documents/typora-user-images/image-20221112004020687.png)
 
-#### Hospital management System for the hospital:
+#### Hospital management System for the hospital
 
 Hospital-manage is a vue hospital management system . It aims to help hospital manager to manage hospital . Hospital managers can upload their hospital set , department and schedule information to database.They can also show information of hospital set, department and schedule.
 
@@ -85,7 +85,7 @@ Hospital-manage is a vue hospital management system . It aims to help hospital m
 | Axios      | 前端HTTP框架          | https://github.com/axios/axios         |
 | Nuxt       | 前端轻量级应用框架     | https://zh.nuxtjs.org/                 |
 
-#### Architecture diagram：
+#### Architecture diagram
 
 ##### Technical Architecture Diagram
 
